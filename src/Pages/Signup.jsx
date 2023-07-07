@@ -4,7 +4,6 @@ import { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useBlogContext } from '../utils/BlogContext';
 import {  ServerUrl } from '../utils/constants';
-import 'react-toastify/dist/ReactToastify.css';
 import { FcGoogle } from 'react-icons/fc'
 import { BsEyeFill, BsEyeSlash } from 'react-icons/bs';
 
