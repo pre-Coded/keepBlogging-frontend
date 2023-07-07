@@ -1,4 +1,4 @@
-export const ServerUrl = "http://localhost:3010/api";
+export const ServerUrl = "https://keepblogging.onrender.com/api";
 
 export const credentials = {
     withCredentials : true,
