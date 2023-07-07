@@ -1,19 +1,12 @@
 import React from 'react'
-import { useEffect, useState, useRef } from 'react'
-import { credentials, ServerUrl } from '../utils/constants'
+import {  useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
 import { useBlogContext } from '../utils/BlogContext'
-import MainBtn from '../Components/Button/MainBtn'
-import { BsArrowRight } from 'react-icons/bs'
-import { BiCopyright, BiDownArrow, BiUpArrow } from 'react-icons/bi'
-
+import { BiCopyright } from 'react-icons/bi'
 import Blog1 from '../assets/blog1.jpg'
 import Blog2 from '../assets/blog2.jpg'
 
 const Home = () => {
-    const [blogList, setBlogList] = useState([]);
-    const [expanded, setExpanded] = useState({});
     const navigate = useNavigate();
     const blgctx = useBlogContext();
 
@@ -54,7 +47,7 @@ const Home = () => {
                 <div className='w-full flex items-center justify-center'>
                     <div className='flex flex-col md:flex-row md:space-x-4 w-full md:w-[80%] items-center'>
                         <div className='w-full flex items-center justify-center' >
-                            <img src={Blog1} className='w-full md:w-[80%] object-cover rounded-md'></img>
+                            <img src={Blog1} className='w-full md:w-[80%] object-cover rounded-md' alt="img loading"></img>
                         </div>
 
                         <div className='w-full flex flex-col items-center justify-start md:justify-center text-center space-y-4 tracking-wide'>
@@ -67,7 +60,7 @@ const Home = () => {
                 <div className='w-full flex items-center justify-center'>
                     <div className='flex flex-col md:flex-row-reverse md:space-x-4 w-full md:w-[80%] items-center'>
                         <div className='w-full flex items-center justify-center' >
-                            <img src={Blog2} className='w-full md:w-[80%] object-cover rounded-md'></img>
+                            <img src={Blog2} className='w-full md:w-[80%] object-cover rounded-md' alt="img loading"></img>
                         </div>
 
                         <div className='w-full flex flex-col items-center justify-start md:justify-center text-center space-y-4 tracking-wide'>

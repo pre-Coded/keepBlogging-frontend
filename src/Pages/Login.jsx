@@ -4,8 +4,6 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useBlogContext } from '../utils/BlogContext';
 import { ServerUrl } from '../utils/constants';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { FcGoogle } from 'react-icons/fc'
 import { BsEyeFill, BsEyeSlash } from 'react-icons/bs';
 
@@ -56,7 +54,6 @@ const Login = () => {
                 return;
             }
         } catch (e) {
-            toast.error("Username or Password is incorrect", { autoClose: 1500 })
             console.log(e);
         }
         blgctx.setLoading(prev => !prev);

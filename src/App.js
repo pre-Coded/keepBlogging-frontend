@@ -1,5 +1,5 @@
-import { Route, Routes, useNavigate } from 'react-router-dom';
-import React, { useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import React from 'react';
 import NavBar from './Components/NavBar/NavBar';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
@@ -14,7 +14,6 @@ import Publish from './Pages/Publish';
 function App() {
   const blgctx = useBlogContext();
 
-  const navigate = useNavigate();
 
   return (
     <div className={`h-screen w-screen relative overflow-hidden flex flex-col bg-[#121212] text-white font-poppins`}>

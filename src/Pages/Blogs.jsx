@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BiFilterAlt } from 'react-icons/bi';
-import { FaExternalLinkAlt } from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import Bg from '../assets/bg.jpg'
 import BlogCard from '../Components/Cards/BlogCard';
 import { useBlogContext } from '../utils/BlogContext';
 
 const Blogs = () => {
     const [filter, setFilter] = useState(false);
-    const [colspan, setColSpan] = useState(false);
     const blgctx = useBlogContext();
-
-    const handleMouseOver = () => { };
 
     const items = [
         "Technology",

@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx'
 import { motion } from 'framer-motion'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useBlogContext } from '../../utils/BlogContext'

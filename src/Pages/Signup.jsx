@@ -3,8 +3,7 @@ import React from 'react'
 import { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useBlogContext } from '../utils/BlogContext';
-import { credentials, ServerUrl } from '../utils/constants';
-import { ToastContainer, toast } from 'react-toastify';
+import {  ServerUrl } from '../utils/constants';
 import 'react-toastify/dist/ReactToastify.css';
 import { FcGoogle } from 'react-icons/fc'
 import { BsEyeFill, BsEyeSlash } from 'react-icons/bs';
@@ -36,7 +35,6 @@ const Signup = () => {
             if (result.data.status === 200) {
                 navigate('/login');
             } else if (result.data.status === 202) {
-                toast.error("Username already exists", { autoClose: 1500 })
             }
         } catch (e) {
             console.log(e);

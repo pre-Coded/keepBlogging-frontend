@@ -1,13 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useBlogContext } from '../../utils/BlogContext';
-import { FaBlog } from 'react-icons/fa'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { RxCross1 } from 'react-icons/rx'
-import { BsArrowDown, BsGraphDownArrow, BsSun } from 'react-icons/bs'
-import { MdAccountCircle, MdNightlight } from 'react-icons/md'
+
 import { motion } from 'framer-motion'
-import { GrDown } from 'react-icons/gr';
 
 const LargeScreen = () => {
     const blgctx = useBlogContext();
@@ -15,7 +10,6 @@ const LargeScreen = () => {
 
     const [hoverLeft, setHoverLeft] = useState(null);
     const [width, setWidth] = useState(null);
-    const [visible, setVisible] = useState(false);
 
     const location = useLocation();
     const homeRef = useRef(null);
@@ -47,7 +41,6 @@ const LargeScreen = () => {
     }
 
     const handleMouseOut = (e) => {
-        const navUl = document.getElementById("largeNavLi");
         setHoverLeft(null);
         setWidth(null);
     }

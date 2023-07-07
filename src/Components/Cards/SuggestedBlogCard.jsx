@@ -29,7 +29,7 @@ const SuggestedBlogCard = ( { data, imageData } ) => {
                 <div className="flex flex-col space-y-2">
                     <div className='flex flex-row gap-2 text-xs'>
                         {items && items?.map((tag, index) => {
-                            if (index === 0) return;
+                            if (index === 0) return "";
                             return <span className='text-gray-500' key={index}>{tag}</span>;
                         })}
                     </div>

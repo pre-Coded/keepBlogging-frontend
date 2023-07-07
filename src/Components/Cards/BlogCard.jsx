@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
-import Bg from '../../assets/bg.jpg'
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { useBlogContext } from '../../utils/BlogContext';
-import axios from 'axios'
-import { useEffect } from 'react';
-import { credentials, ServerUrl } from '../../utils/constants';
 
 const BlogCard = ({ data, imageData }) => {
 

@@ -22,7 +22,7 @@ export const ContextProvider = (props) => {
 
     const handleFollow = async (username) => {
         try {
-            const result = await axios.put(`${ServerUrl}/user?followerUpdate=true`,
+            await axios.put(`${ServerUrl}/user?followerUpdate=true`,
             {
                 username : user.username,
                 followerName: username,

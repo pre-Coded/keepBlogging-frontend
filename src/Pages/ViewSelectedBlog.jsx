@@ -1,10 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useBlogContext } from '../utils/BlogContext';
-import Bg from '../assets/bg.jpg';
 import { FcLikePlaceholder, FcLike } from 'react-icons/fc';
 import { IoMdShareAlt } from 'react-icons/io';
-import axios from 'axios'
-import { ServerUrl, credentials } from '../utils/constants';
 import SuggestedBlogCard from '../Components/Cards/SuggestedBlogCard'
 import { motion } from 'framer-motion'
 
@@ -78,7 +75,7 @@ const ViewSelectedBlog = () => {
             {
               data.tags?.map((tags, index) => {
                 if (index === 0) {
-                  return;
+                  return "";
                 }
                 return <span className='text-gray-500 text-xs'>{tags}</span>
               })

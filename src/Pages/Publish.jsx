@@ -1,16 +1,13 @@
-import React, { useState, useRef } from 'react';
-import JoditEditor from 'jodit-react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { ServerUrl } from '../utils/constants';
 import { useBlogContext } from '../utils/BlogContext';
-import { credentials } from '../utils/constants'
 
 import ReactQuill from 'react-quill';
 import "react-quill/dist/quill.snow.css";
 
 
 const Publish = () => {
-    const editor = useRef(null);
     const blgctx = useBlogContext();
 
     const [title, setTitle] = useState("What's on your mind?");

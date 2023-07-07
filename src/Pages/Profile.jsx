@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { useBlogContext } from '../utils/BlogContext';
-import { credentials, ServerUrl } from '../utils/constants';
-import axios from 'axios'
 
 const Profile = () => {
-
-    const navigate = useNavigate();
-    const [blogList, setBlogList] = useState([]);
     const blgctx = useBlogContext();
 
     const [follow , setFollow] = useState( blgctx.selectedUser?.followers.includes(blgctx.user.username) );
