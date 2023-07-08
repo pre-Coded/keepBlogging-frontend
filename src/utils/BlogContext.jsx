@@ -120,9 +120,7 @@ export const ContextProvider = (props) => {
                 withCredentials: true,
                 credentials: 'include'
             });
-
-            console.log(data);
-
+            
             setBlogList(data.data);
         } catch (e) {
             console.log(e);
